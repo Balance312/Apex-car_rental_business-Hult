@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: auto;
+    min-height: 100vh;
+}
+nav{
+    background:linear-gradient(135deg, #000000 0%, #3D0000 100%);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+}
+nav a:hover{
+    text-decoration: underline;
+    color:rgb(141, 11, 11);
+}
+nav button{
+    background-color: #710000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+nav button:hover{
+    background-color: #ff0800;
+    scale: 1.15;
+    box-shadow: 0 8px 20px rgba(255, 8, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.container{
+    display: flex;
+    padding: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url(./images/wallhaven-9dxqwd_1920x1080.png);
+    background-size: cover;
+    
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+.div{
+    width: 60%;
+    padding: 20px;
+    color:#ffffff;
+}
+p{
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.p2{
+    margin-left: 100px;
+}
+
+.form-section {
+    width: 40%;
+    height: 560px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(20, 20, 30, 0.85);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 8, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+input[type="email"],
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="email"]::placeholder,
+input[type="date"]::placeholder,
+input[type="text"]::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff0800;
+    background-color: rgba(255, 8, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 8, 0, 0.3), inset 0 0 10px rgba(255, 8, 0, 0.05);
+}
+
+input[type="file"] {
+    padding: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    accent-color: #ff0800;
+}
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(135deg, #ff0800 0%, #ff3d00 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    letter-spacing: 0.5px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(135deg, #ff3d00 0%, #ff0800 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 8, 0, 0.4);
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #ff0800 0%, #ff3d00 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 50px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+    box-shadow: 0 6px 25px rgba(255, 8, 0, 0.4);
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #ff3d00 0%, #ff0800 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(255, 8, 0, 0.6);
+}
+
+button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
