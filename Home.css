@@ -9,6 +9,7 @@ html{
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f8fcff;
+    overflow-x: hidden;
 }
 nav{
     background-color: transparent;
@@ -16,6 +17,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(2, 73, 84, 0.378);
 }
@@ -132,7 +135,7 @@ a::after {
     margin-top: 20px;
     margin-left: 100px;
     margin-bottom: 100px;
-    width: 500px;
+    width: min(100%, 500px);
     text-align: left;
 }
 .Header-text h1{
@@ -147,6 +150,7 @@ a::after {
     background-color: aliceblue;
     display: flex;
     width: 850px;
+    max-width: calc(100% - 200px);
     flex-direction: row;
     align-items: flex-end;
     color: #000000;
@@ -170,7 +174,7 @@ a::after {
     border-radius: 4px;
 }
 .field input{
-    width: 300px;
+    width: min(100%, 300px);
 }
 .form-btn{
     padding: 10px 20px;
@@ -208,7 +212,7 @@ a::after {
     display: flex;
     flex-direction: row;
     align-items: left;
-    gap :800px;
+    gap : clamp(24px, 8vw, 800px);
     margin-left: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -226,7 +230,7 @@ a::after {
     justify-content: center;
     padding: 50px;
     gap: 50px;
-    height: 450px;
+    min-height: 450px;
 }
 .card{
     background-color: #fff;
@@ -234,8 +238,8 @@ a::after {
     padding: 24px;
     border-radius: 24px;
     border: #e1efff 2px solid;
-    width: 500px;
-    height:380px;
+    width: min(100%, 500px);
+    min-height:380px;
     
 }
 .card-img{
@@ -280,7 +284,7 @@ a::after {
     justify-content: center;
     gap: 20px;
     color: #e1efff;
-    padding: 150px 300px 150px 300px;
+    padding: 150px clamp(24px, 10vw, 300px);
     background-color: rgb(23, 23, 23);
 }
 .Container-num4 h1{
@@ -347,4 +351,100 @@ a::after {
     text-align: center;
     font-size: 14px;
     color: rgba(244, 244, 244, 0.75);
+}
+
+@media (max-width: 1024px) {
+    .Container-num1 {
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .Header-text,
+    .pick-up,
+    .Container-num2,
+    .Container-num3,
+    .Container-num4 form {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .pick-up {
+        max-width: calc(100% - 48px);
+        flex-wrap: wrap;
+    }
+
+    .Container-num2 {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .Container-num3 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav .logo,
+    .nav-links,
+    .nav-buttons {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .Container-num1 {
+        padding: 24px 16px 32px;
+    }
+
+    .Header-text {
+        margin: 16px 0 32px;
+        width: 100%;
+    }
+
+    .Header-text h1 {
+        font-size: 32px;
+    }
+
+    .Header-text p {
+        font-size: 16px;
+    }
+
+    .pick-up {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .field input {
+        width: 100%;
+    }
+
+    .Container-num2 {
+        margin-left: 16px;
+        margin-right: 16px;
+        gap: 20px;
+    }
+
+    .Container-num3 {
+        padding: 32px 16px;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .Container-num4 form {
+        padding: 48px 20px;
+        width: calc(100% - 32px);
+        margin-top: 32px;
+    }
+
+    .Container-num4 input {
+        width: 100%;
+    }
 }
